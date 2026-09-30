@@ -1,16 +1,15 @@
 # Effect of income on gasoline consumption
 
-## About this project
+## project
 
 I have replicated the work of Professor [Victor Chernozhukov](https://www.victorchernozhukov.com/) by changing the variable of interest from **price** to **income**, to understand how the method works and what it says about a different question. The original analysis estimates how gasoline demand responds to price. Here, the same automatic debiased machine learning pipeline is used to estimate how gasoline demand responds to **income**. All credit for the original method and code structure goes to the original authors. The changes in this repository adapt it to the income question.
 
-## Question answered
+## Question
 
 > By what percentage does gas consumption change when household income rises by 1%?
 
-This is the **income elasticity of gasoline demand**: the average derivative of log gas consumption with respect to log income. The estimator is automatic debiased machine learning (Riesz representer, lasso, 5-fold cross-fitting).
 
-## What changed from the original
+## Changed 
 
 | | Original | This project |
 |---|---|---|
@@ -21,7 +20,7 @@ This is the **income elasticity of gasoline demand**: the average derivative of 
 
 Every term that involves income (income squared and its interactions with the controls) is recomputed when income is shifted up and down.
 
-## Main result
+## Result
 
 The full-sample income elasticity is **0.256** (95% CI 0.226 to 0.286). A 10% rise in income goes with roughly a 2.6% rise in gas consumption. Gas is a normal good, but demand is inelastic with respect to income.
 
@@ -79,7 +78,7 @@ Avoid `gamma_estimator = 2`: a random forest is a step function, and income take
 - **Distance driven is deliberately excluded.** Income affects gas mostly through how much people drive, so controlling for distance blocks that channel. Including it gives an elasticity of about **0.038**, which is the effect of income on gas use *holding distance driven fixed*. That is a different and much smaller quantity than the total effect reported above.
 - **Quintiles:** income quintiles are formed with `dplyr::ntile`. Income takes only a few bracket values ($20,000 to $100,000), so tied incomes are split arbitrarily and the subgroup estimates are noisy.
 
-## Interpretation and limits
+## Interp & limits
 
 - The estimate is an association adjusted for the listed controls. It is causal only if those controls capture everything that moves both income and gas consumption.
 - It estimates an average effect per 1% change in income, based on small shifts around each household's income. It is not a forecast for a specific household or a large income change.
