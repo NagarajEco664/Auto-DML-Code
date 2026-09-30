@@ -11,7 +11,7 @@ I have replicated the work of Professor [Victor Chernozhukov](https://www.victor
 
 ## Changed 
 
-| | Original | This project |
+| | Original | work |
 |---|---|---|
 | Variable shifted to form the derivative | Price | **Income** |
 | Price | Treatment | Control (price and price squared) |
