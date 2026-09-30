@@ -64,7 +64,7 @@ Avoid `gamma_estimator = 2`: a random forest is a step function, and income take
 - **Distance driven is deliberately excluded.** Income affects gas mostly through how much people drive, so controlling for distance blocks that channel. Including it gives an elasticity of about **0.038**, which is the effect of income on gas use *holding distance driven fixed*. That is a different and much smaller quantity than the total effect reported above.
 - **Quintiles:** income quintiles are formed with `dplyr::ntile`. Income takes only a few bracket values ($20,000 to $100,000), so tied incomes are split arbitrarily and the subgroup estimates are noisy.
 
-## Interpretation and limits
+## Inter & limits
 
 - The estimate is an association adjusted for the listed controls. It is causal only if those controls capture everything that moves both income and gas consumption.
 - It estimates an average effect per 1% change in income, based on small shifts around each household's income. It is not a forecast for a specific household or a large income change.
