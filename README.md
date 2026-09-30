@@ -2,7 +2,7 @@
 
 Estimates the **income elasticity of gasoline demand**: the average derivative of log gas consumption with respect to log income. The estimator is automatic debiased machine learning (Riesz representer, lasso, 5-fold cross-fitting), adapted from the Chernozhukov et al. gasoline demand code, with **income** as the treatment variable instead of price.
 
-## Question answered
+## Question
 
 > By what percentage does gas consumption change when household income rises by 1%?
 
