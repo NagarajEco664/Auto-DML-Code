@@ -6,7 +6,7 @@ Estimates the **income elasticity of gasoline demand**: the average derivative o
 
 > By what percentage does gas consumption change when household income rises by 1%?
 
-## Main result
+## Results
 
 The full-sample income elasticity is **0.256** (95% CI 0.226 to 0.286). A 10% rise in income goes with roughly a 2.6% rise in gas consumption. Gas is a normal good, but demand is inelastic with respect to income.
 
